@@ -4,12 +4,13 @@ import java.util.Objects;
 
 public class LineProgram {
     public static void main(String[] args) {
+        // co-ordinates of point 1
         double x1 = 1;
         double y1 = 1;
 
         // co-ordinates of point 2
         double x2 = 2;
-        double y2 = 2;
+        double y2 = 3;
 
         // co-ordinates of point 3
         double x3 = 3;
@@ -24,8 +25,14 @@ public class LineProgram {
 
         System.out.println("Length of Line 1 : " + length1);
         System.out.println("Length of Line 2 : " + length2);
-        boolean result = Objects.equals(length1, length2); // comparing using equals method
-        System.out.println("BOTH LINES ARE EQUAL ? " +result);
+        int obj = Double.compare(length1,length2);
+        if (obj == 0) {
+            System.out.println("Both lines are same :");
+        } else if (obj > 0) {
+            System.out.println("Line 1 is Grater :");
 
+        } else {
+            System.out.println("Line 2 is Grater");
+        }
     }
 }
